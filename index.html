@@ -32,5 +32,20 @@
     <audio id="animals">
         <source src="animals martin garix.mp3" type="audio/mp3">
     </audio>
+
+    <script>
+        var mySong = document.getElementById("animals");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "/images/pause.png"
+            } else {
+                mySong.pause();
+                icon.src = "/images/play.png"
+            }
+        }
+    </script>
 </body>
 </html>
